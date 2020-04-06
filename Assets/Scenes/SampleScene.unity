@@ -932,7 +932,6 @@ GameObject:
   - component: {fileID: 710402039}
   - component: {fileID: 710402045}
   - component: {fileID: 710402046}
-  - component: {fileID: 710402047}
   - component: {fileID: 710402048}
   - component: {fileID: 710402049}
   - component: {fileID: 710402050}
@@ -946,6 +945,8 @@ GameObject:
   - component: {fileID: 710402057}
   - component: {fileID: 710402058}
   - component: {fileID: 710402059}
+  - component: {fileID: 710402060}
+  - component: {fileID: 710402047}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -967,8 +968,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 225
-    y: 65.98167
+    x: 219.90837
+    y: 69.03667
     width: 167.61711
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -976,7 +977,7 @@ MonoBehaviour:
   itemId: 1
   blockName: Thor Dream Sequence
   description: Thor dream sequence
-  eventHandler: {fileID: 710402047}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 710402053}
   - {fileID: 710402045}
@@ -987,6 +988,7 @@ MonoBehaviour:
   - {fileID: 710402046}
   - {fileID: 710402050}
   - {fileID: 710402051}
+  - {fileID: 710402047}
 --- !u!114 &710402040
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1025,7 +1027,8 @@ MonoBehaviour:
   blockName: Start
   description: Starting
   eventHandler: {fileID: 710402040}
-  commandList: []
+  commandList:
+  - {fileID: 710402060}
 --- !u!114 &710402042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,10 +1042,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 15.103906, y: 1.7413425}
+  scrollPos: {x: 77.221016, y: -6.412564}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 250
+  blockViewHeight: 455
   zoom: 0.982
   scrollViewRect:
     serializedVersion: 2
@@ -1171,11 +1174,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 710402038}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10eaeba5e91be479e95d4fa48679f549, type: 3}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 710402039}
-  targetButton: {fileID: 97704912}
+  itemId: 20
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 710402056}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!114 &710402048
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1378,7 +1388,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 413.6124
-    y: 67.50503
+    y: 69.541695
     width: 142.15886
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1477,6 +1487,27 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &710402060
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710402038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  targetFlowchart: {fileID: 710402042}
+  targetBlock: {fileID: 710402039}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1 &869013249
 GameObject:
   m_ObjectHideFlags: 0
